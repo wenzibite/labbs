@@ -50,11 +50,11 @@ class SeedRolesAndPermissionsData extends Migration
         $tableNames = config('permission.table_names');
 
         Model::unguard();
-        DB::table($table_names['role_has_permissions'])->delete();
-        DB::table($table_names['model_has_roles'])->delete();
-        DB::table($table_names['model_has_permissions'])->delete();
-        DB::table($table_names['roles'])->delete();
-        DB::table($table_names['permissions'])->delete();
+        DB::table($tableNames['role_has_permissions'])->delete();
+        DB::table($tableNames['model_has_roles'])->delete();
+        DB::table($tableNames['model_has_permissions'])->delete();
+        DB::table($tableNames['roles'])->delete();
+        DB::table($tableNames['permissions'])->delete();
         Model::reguard();
     }
 }
